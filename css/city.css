@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+ html{
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+ }
+ .navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+
+    /* the rest of your styling */
+}
+#header{
+    width: 100%;
+    height: auto;
+}
+ #nav-title
+ {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+ }
+
+
+#main-content{
+  
+position: relative;
+    width: 100%;
+    height: auto;
+    
+}
+
+.main-title{
+    margin-left: -300px;
+}
+
+.main-title h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main-btn{
+    border-radius: 25px;
+    width: 200px;
+
+}
+
+
+
+/*    ######     Responsive     #####    */
+@media screen and (max-width: 748px) {
+    .main-title{
+        margin-left: 0;
+    }
+  }

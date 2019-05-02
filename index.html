@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breathio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1/leaflet.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+       
+    <header id="map-container">
+            
+        <video autoplay muted loop>
+          <source src="vid/Globe_India1_Videvo.mov" type="video/mp4">
+        </video>
+        <div id="overlay">
+                <nav class="navbar navbar-dark">
+                        <a class="navbar-brand ml-3 py-3" id="nav-title" href="index.html">Breath.io</a>
+                      </nav>
+                      
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>Select your city.</h1>
+                <input type="search" id="input-map" class="form-control" placeholder="Where are we going?"  onkeypress="myFunction()" onsearch="newPage()"/>
+                <div id="map-example-container" class="mt-3"></div>
+            </div>
+        </div> 
+       
+        <nav class="container-fab"  > 
+    
+                <a href="scope.html" class="buttons" tooltip="Future Scope"></a>
+                
+                <a href="team.html" class="buttons" tooltip="Team"></a>
+                
+                <a href="apa.html" class="buttons" tooltip="Air-Pollution Analysis"></a>
+            
+                <a class="buttons" tooltip="More" href="#"></a>
+            
+              </nav>
+    </header>
+
+
+    </section>
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
+<script>
+    function myFunction() {
+  var x = document.getElementById("map-example-container");
+  
+    x.style.visibility = "visible";
+ 
+}
+ function newPage(){
+  let str = document.getElementById("input-map").value;
+  let res = str.split(",");
+   let page_name = res[0].toLowerCase()+'.html';
+   var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+     
+   if(res[0] == 'Delhi')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+    
+   }
+   else if(res[0] == 'New Delhi')
+   {
+    window.open("delhi.html","_blank");
+    var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+   if(res[0] == 'Mumbai')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+   if(res[0] == 'Hyderabad')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+   if(res[0] == 'Panjim')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+   if(res[0] == 'Bhubaneswar')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+   if(res[0] == 'Visakhapatnam')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+   if(res[0] == 'Dehradun')
+   {
+     window.open(page_name,"_blank");
+     var x = document.getElementById("map-example-container");
+     x.style.visibility = "hidden";
+   }
+  
+ }
+
+
+        (function() {
+          var placesAutocomplete = places({
+            appId: 'pl2LHW2PEK18',
+            apiKey: '9c588a3c70b66685968368959dc2d061',
+            container: document.querySelector('#input-map')
+          });
+        
+          var map = L.map('map-example-container', {
+            scrollWheelZoom: false,
+            zoomControl: false
+          });
+        
+          var osmLayer = new L.TileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              minZoom: 1,
+              maxZoom: 13,
+              attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+            }
+          );
+        
+          var markers = [];
+        
+          map.setView(new L.LatLng(0, 0), 1);
+          map.addLayer(osmLayer);
+        
+          placesAutocomplete.on('suggestions', handleOnSuggestions);
+          placesAutocomplete.on('cursorchanged', handleOnCursorchanged);
+          placesAutocomplete.on('change', handleOnChange);
+          placesAutocomplete.on('clear', handleOnClear);
+        
+          function handleOnSuggestions(e) {
+            markers.forEach(removeMarker);
+            markers = [];
+        
+            if (e.suggestions.length === 0) {
+              map.setView(new L.LatLng(0, 0), 1);
+              return;
+            }
+        
+            e.suggestions.forEach(addMarker);
+            findBestZoom();
+          }
+        
+          function handleOnChange(e) {
+            markers
+              .forEach(function(marker, markerIndex) {
+                if (markerIndex === e.suggestionIndex) {
+                  markers = [marker];
+                  marker.setOpacity(1);
+                  findBestZoom();
+                } else {
+                  removeMarker(marker);
+                }
+              });
+          }
+        
+          function handleOnClear() {
+            map.setView(new L.LatLng(0, 0), 1);
+            markers.forEach(removeMarker);
+          }
+        
+          function handleOnCursorchanged(e) {
+            markers
+              .forEach(function(marker, markerIndex) {
+                if (markerIndex === e.suggestionIndex) {
+                  marker.setOpacity(1);
+                  marker.setZIndexOffset(1000);
+                } else {
+                  marker.setZIndexOffset(0);
+                  marker.setOpacity(0.5);
+                }
+              });
+          }
+        
+          function addMarker(suggestion) {
+            var marker = L.marker(suggestion.latlng, {opacity: .4});
+            marker.addTo(map);
+            markers.push(marker);
+          }
+        
+          function removeMarker(marker) {
+            map.removeLayer(marker);
+          }
+        
+          function findBestZoom() {
+            var featureGroup = L.featureGroup(markers);
+            map.fitBounds(featureGroup.getBounds().pad(0.5), {animate: false});
+          }
+        })();
+        </script>
+        
+</body>
+</html>
