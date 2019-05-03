@@ -14,18 +14,17 @@
 
     /* the rest of your styling */
 }
-#header{
-    width: 100%;
-    height: auto;
-}
+
  #nav-title
  {
     font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
  }
 
-
-#main-content{
+#header .header-inner{
+    padding-top: 150px;
+}
+/* #main-content{
   
 position: relative;
     width: 100%;
@@ -54,4 +53,4 @@ position: relative;
     .main-title{
         margin-left: 0;
     }
-  }
+  } */
