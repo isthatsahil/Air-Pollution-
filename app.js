@@ -5,6 +5,8 @@ window.addEventListener('load',()=> {
     let temperatureDegree = document.querySelector('.temperature-degree');
     let cityHumidity = document.querySelector('.humidity');
     let cityVisibility = document.querySelector('.visibility');
+    let tempSection = document.querySelector('.temp-section');
+    let tempUnit = document.querySelector('.temp-unit');
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(position =>{
          long = 77.225;
@@ -25,9 +27,20 @@ window.addEventListener('load',()=> {
              temperatureDegree.textContent = temperature;
              temperatureDescription.textContent = summary;
              cityVisibility.textContent = visibility;
+              // Formula to convert into celsius
+              let celsius = (temperature - 32) * (5 / 9);
             //Set Icons
             setIcons(icon, document.querySelector('.icon'));
 
+            tempSection.addEventListener("click",()=> {
+                if(tempUnit.textContent === "°F"){
+                  tempUnit.textContent = "°C";
+                  temperatureDegree.textContent = Math.floor(celsius);
+                }else{
+                  tempUnit.textContent = "°F";
+                  temperatureDegree.textContent = temperature;
+                }
+            });
           });
       });
       
