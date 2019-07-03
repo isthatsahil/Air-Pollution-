@@ -96,11 +96,12 @@ table{
 
   .about{
     display : flex;
+    padding:100px; 
     justify-content : center;
     align-items : center;
-    background-color:#000;
-    color : #FFF;
-    height:100%
+    background-color:#fff;
+    color : #000;
+    height:100vh;
   }
 /*    ######     Responsive     #####    */
 @media screen and (max-width: 748px) {

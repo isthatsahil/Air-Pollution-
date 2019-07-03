@@ -6,13 +6,8 @@
     <title>Breathio</title>
     <link rel="stylesheet" href="css/city.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-    <style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <style>
         .canvas{
             width: 50%;
             height: 300px;
@@ -94,28 +89,43 @@
     
 
 
-            <div class="container-fluid" id="analyze">
+            <!-- <div class="container-fluid" id="analyze"> -->
 
                 <!-- PILLS -->
     
-                <div class="row">
-                        <div class="col-sm-12">
+                <!-- <div class="row">
+                 <div class="col-sm-12">
                     <h2>Dynamic Tabs</h2>
                     <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
-                  
-                    <ul class="nav nav-pills">
+                   -->
+                    <!-- <ul class="nav nav-pills" role="tablist">
                       <li class="active"><a data-toggle="pill" href="#home">PRESENT</a></li>
                       <li><a data-toggle="pill" href="#2014">2014</a></li>
                       <li><a data-toggle="pill" href="#2015">2015</a></li>
                       <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
-                    </ul>
-                    </div>
-    
-    
+                    </ul> -->
+
+                    <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item active">
+                              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#year" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#2015" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                            </li>
+                          </ul>
+
+                    </div>   
+     -->
                                 <!-- Present scenerio Chart -->
-                </div>
+                <!-- </div>
+
                 
-                    <div class="tab-content container-fluid">
+             </div> -->
+                
+                    <!-- <div class="tab-content container-fluid">
                       <div id="home" class="tab-pane fade in active row">
                                 <div class="col-sm-6 canvas ">
                                     <canvas id="myChart"  ></canvas>
@@ -135,10 +145,10 @@
     
                                
                             
-                      </div>
+                      </div> -->
     
                                 <!-- 2014 Chart -->
-                                <div id="2014" class="tab-pane fade in active row">
+                                <!-- <div id="2014" class="tab-pane fade in active row">
                                         <div class="col-sm-6 canvas ">
                                             <canvas id="2014-1"  ></canvas>
                                         </div>
@@ -158,10 +168,10 @@
                                        
                                     
                               </div>
-    
+     -->
     
                        <!-- 2015 Chart -->
-                       <div id="2015" class="tab-pane fade in active row">
+                       <!-- <div id="2015" class="tab-pane fade in active row">
                         <div class="col-sm-6 canvas ">
                             <canvas id="2014-1"  ></canvas>
                         </div>
@@ -180,17 +190,17 @@
 
                        
                     
-              </div>
+              </div> -->
 
 
-                      <div id="menu3" class="tab-pane fade">
+                      <!-- <div id="menu3" class="tab-pane fade">
                         <h3>Menu 3</h3>
                         <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                       </div>
-                    </div>
+                    </div> -->
 
 
-                  </div>
+                  <!-- </div> -->
     
     
    
@@ -198,17 +208,94 @@
     
     
                   <section class="about">
-                    <div>
-                      <p>
-                        About
-                      </p>
-                    </div>
+                        <div class="container-fluid" id="analyze">
+                            <div class="header mt-5 mb-5">
+                                <h2 class="display-4">
+                                    Air Pollution Analysis
+                                </h2>
+                            </div>
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item active">
+                                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#year" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#2015" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                                    </li>
+                           </ul>           
+                                 <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                               <div class="row">
+                                                    <div class="col-sm-6 canvas ">
+                                                            <canvas id="myChart"  ></canvas>
+                                                     </div>
+                            
+                                                        <div class="col-sm-6 canvas ">
+                                                                <canvas id="myChart1"  ></canvas>
+                                                        </div>
+                            
+                                                        <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                                <canvas id="myChart2"     ></canvas>
+                                                        </div>
+                                
+                                                        <div class="col-sm-6 canvas ">
+                                                                <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
+                                                        </div>   
+                                               </div>
+                                                                                        
+                                              
+                                        </div>
+                                        <div class="tab-pane fade" id="year" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                               <div class="row">
+                                                    <div class="col-sm-6 canvas ">
+                                                            <canvas id="2014-1"  ></canvas>
+                                                        </div>
+                            
+                                                        <div class="col-sm-6 canvas ">
+                                                                <canvas id="2014-2"></canvas>
+                                                        </div>
+                            
+                                                        <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                                <canvas id="2014-3"     ></canvas>
+                                                        </div>
+                                
+                                                        <div class="col-sm-6 canvas ">
+                                                                <canvas id="2014-4" style="margin-top: 60px;" ></canvas>
+                                                        </div>
+                                               </div>                                                                                                        
+                                        </div>
+                                        <div class="tab-pane fade" id="2015" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                                
+                                                        <div class="col-sm-6 canvas ">
+                                                            <canvas id="2014-1"  ></canvas>
+                                                        </div>
+                                
+                                                        <div class="col-sm-6 canvas ">
+                                                                <canvas id="2014-2"></canvas>
+                                                        </div>
+                                
+                                                        <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                                <canvas id="2014-3"     ></canvas>
+                                                        </div>
+                                
+                                                        <div class="col-sm-6 canvas ">
+                                                                <canvas id="2014-4" style="margin-top: 60px;" ></canvas>
+                                                        </div>
+                                
+                                                       
+                                                    
+                                              </div>
+                                        </div>
+                        </div>
                   </section>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
+                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="skycons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
                 window.addEventListener('load',()=> {
                 let long;
@@ -482,6 +569,5 @@ var ctxb4 = document.getElementById('2014-4').getContext('2d');
 
 
         </script>
-        <script src="skycons.js"></script>
     </body>
     </html>        
