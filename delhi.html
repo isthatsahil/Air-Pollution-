@@ -1,0 +1,484 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breathio</title>
+    <link rel="stylesheet" href="css/city.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <style>
+        .canvas{
+            width: 50%;
+            height: 300px;
+        }
+    </style>
+
+</head>
+<body>
+        <section class="intro">
+                <div class="row">
+                     <div class="col-lg-7 col-sm-6 left bg-light">
+                            <nav class="navbar navbar-expand-sm navbar-dark bg-dark " style="width: 900px;">
+                                    <div class="container">
+                                        <blockquote class="blockquote ml-auto mr-auto">
+                                                <a class="navbar-brand ml-auto mr-auto" id="nav-title" href="index.html">
+                                                    Breath.io
+                                                </a>
+                                                <footer class="blockquote-footer">Breathe in <cite title="Source Title">Good Air</cite></footer>
+                                        </blockquote>
+                                  </div>
+                             </nav>
+                             <div class="container">
+                                    <div class="row" style="padding-top: 50px;">
+                                            <div class="col">
+                                                <div class="city-name p-3">
+                                                        <h2 >New Delhi</h2>
+                                                        <p class="text-justify lead mt-2">
+                                                                New Delhi is an urban district of Delhi which serves as the capital of India and seat of all three branches of the Government of India. The foundation stone of the city was laid by Emperor George V during the Delhi Durbar of 1911. It was designed by British architects, Sir Edwin Lutyens and Sir Herbert Baker.
+                                                        </p>
+                                                        <a class="btn btn-primary  mt-3 btnOutline" href="#analyze" style=" border-radius: 25px;">Explore<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                             </div>
+                            
+                      </div>
+                      <div class="col-lg-5 sol-sm-5 right" style="padding: 0;">
+                          <div class="overlay">
+                                <div class="location mt-5">
+                                        <canvas class="icon" width="238" height="238"></canvas>                                       
+                                 </div>
+                                 <div class="description mt-3">
+                                        <h4 class="temperature-description mt-3"></h4>
+                                 </div>    
+                                 <table class="table table-dark mt-5" style="background: transparent;">                                       
+                                        <tbody>
+                                          <tr>                   
+                                            <td style="border: none;"></td>                          
+                                            <td class="text-center" style="border: none;"><p><b>Humidity</b></p></td>   
+                                                                                     
+                                            <td class="pl-5"  style="border: none;"><p class="humidity"></p></td>         
+                                          </tr>
+                                          <tr>                     
+                                                <td style="border: none;"></td>                       
+                                                <td class="text-center" style="border: none;"><p><b>Temperature</b></p></td>                                                         
+                                                <td class="pl-5"  style="border: none;">
+                                                    <p class="temp-section" style="cursor: pointer;">
+                                                        <span class="temperature-degree"></span> 
+                                                        <span class="temp-unit">°F</span>
+                                                    </p>
+                                                </td>         
+                                          </tr>
+                                          <tr>    
+                                                <td style="border: none;"></td>                                           
+                                                <td class="text-center" style="border: none;"><p><b>Visibility</b></p></td>                                            
+                                                <td class="pl-5"  style="border: none;"><p class="Visibility"></p></td>               
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                          </div>
+                        
+                      </div>
+                </div>
+            </section>
+    
+
+
+            <div class="container-fluid" id="analyze">
+
+                <!-- PILLS -->
+    
+                <div class="row">
+                        <div class="col-sm-12">
+                    <h2>Dynamic Tabs</h2>
+                    <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+                  
+                    <ul class="nav nav-pills">
+                      <li class="active"><a data-toggle="pill" href="#home">PRESENT</a></li>
+                      <li><a data-toggle="pill" href="#2014">2014</a></li>
+                      <li><a data-toggle="pill" href="#2015">2015</a></li>
+                      <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
+                    </ul>
+                    </div>
+    
+    
+                                <!-- Present scenerio Chart -->
+                </div>
+                
+                    <div class="tab-content container-fluid">
+                      <div id="home" class="tab-pane fade in active row">
+                                <div class="col-sm-6 canvas ">
+                                    <canvas id="myChart"  ></canvas>
+                                </div>
+    
+                                <div class="col-sm-6 canvas ">
+                                        <canvas id="myChart1"  ></canvas>
+                                </div>
+    
+                                <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                        <canvas id="myChart2"     ></canvas>
+                                </div>
+        
+                                <div class="col-sm-6 canvas ">
+                                        <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
+                                </div>
+    
+                               
+                            
+                      </div>
+    
+                                <!-- 2014 Chart -->
+                                <div id="2014" class="tab-pane fade in active row">
+                                        <div class="col-sm-6 canvas ">
+                                            <canvas id="2014-1"  ></canvas>
+                                        </div>
+            
+                                        <div class="col-sm-6 canvas ">
+                                                <canvas id="2014-2"></canvas>
+                                        </div>
+            
+                                        <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                <canvas id="2014-3"     ></canvas>
+                                        </div>
+                
+                                        <div class="col-sm-6 canvas ">
+                                                <canvas id="2014-4" style="margin-top: 60px;" ></canvas>
+                                        </div>
+            
+                                       
+                                    
+                              </div>
+    
+    
+                       <!-- 2015 Chart -->
+                       <div id="2015" class="tab-pane fade in active row">
+                        <div class="col-sm-6 canvas ">
+                            <canvas id="2014-1"  ></canvas>
+                        </div>
+
+                        <div class="col-sm-6 canvas ">
+                                <canvas id="2014-2"></canvas>
+                        </div>
+
+                        <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                <canvas id="2014-3"     ></canvas>
+                        </div>
+
+                        <div class="col-sm-6 canvas ">
+                                <canvas id="2014-4" style="margin-top: 60px;" ></canvas>
+                        </div>
+
+                       
+                    
+              </div>
+
+
+                      <div id="menu3" class="tab-pane fade">
+                        <h3>Menu 3</h3>
+                        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+    
+    
+   
+
+    
+    
+                  <section class="about">
+                    <div>
+                      <p>
+                        About
+                      </p>
+                    </div>
+                  </section>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="skycons.js"></script>
+        <script>
+                window.addEventListener('load',()=> {
+                let long;
+                let lat;
+                let temperatureDescription = document.querySelector('.temperature-description');
+                let temperatureDegree = document.querySelector('.temperature-degree');
+                let cityHumidity = document.querySelector('.humidity');
+                let cityVisibility = document.querySelector('.visibility');
+                let tempSection = document.querySelector('.temp-section');
+                let tempUnit = document.querySelector('.temp-unit');
+                if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(position =>{
+                    long = 77.225;
+                    lat= 28.6353;
+                    
+                    const proxy = `https://cors-anywhere.herokuapp.com/`;
+                    const api = `${proxy}https://api.darksky.net/forecast/5033dc8cfdd06d9333da833a053425a7/${lat},${long}`;
+
+                    fetch(api)
+                    .then(response => {
+                        return response.json();
+                    })  //.then only works when we get a response from fetch
+                    .then(data => {
+                        console.log(data);
+                        const {temperature, summary, icon, humidity, visibility} = data.currently;
+                        //Set DOM Elements from API
+                        cityHumidity.textContent = humidity;
+                        temperatureDegree.textContent = temperature;
+                        temperatureDescription.textContent = summary;
+                        cityVisibility.textContent = visibility;
+                        // Formula to convert into celsius
+                        let celsius = (temperature - 32) * (5 / 9);
+                        //Set Icons
+                        setIcons(icon, document.querySelector('.icon'));
+
+                        tempSection.addEventListener("click",()=> {
+                            if(tempUnit.textContent === "°F"){
+                            tempUnit.textContent = "°C";
+                            temperatureDegree.textContent = Math.floor(celsius);
+                            }else{
+                            tempUnit.textContent = "°F";
+                            temperatureDegree.textContent = temperature;
+                            }
+                        });
+                    });
+                });
+                
+                }
+
+                function setIcons(icon, iconID){
+                    const skycons = new Skycons({color: 'white'});
+                    const currentIcon = icon.replace(/-/g, "_").toUpperCase(); 
+                    skycons.play();
+                    return skycons.set(iconID, Skycons[currentIcon]);
+                }
+
+
+                // 2014 CHART
+
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+             // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+         data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+var ctx1 = document.getElementById('myChart1').getContext('2d');
+            var chart = new Chart(ctx1, {
+             // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+         data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+          
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+var ctx2 = document.getElementById('myChart2').getContext('2d');
+            var chart2 = new Chart(ctx2, {
+             // The type of chart we want to create
+            type: 'doughnut',
+
+            // The data for our dataset
+         data: {
+            labels:["Red","Blue","Yellow"],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: ["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"],
+          
+                        data:[300,50,100]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+var Chart3 = new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'Bar Dataset',
+            data: [10, 20, 30, 40]
+        }, {
+            label: 'Line Dataset',
+            data: [50, 30, 20, 50],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+// 2014
+
+// 1. LINE AND BAR CHART
+// SO2 CHART 
+var ctxb1 = document.getElementById('2014-1').getContext('2d');
+var Chartb1 = new Chart(ctxb1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51]
+        }, {
+            label: 'SO2',
+            data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2014  N02 CHART
+
+            var ctxb2 = document.getElementById('2014-2').getContext('2d');
+            var Chartb2 = new Chart(ctxb2, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        label: 'NO2',
+                        data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51]
+                    },   {
+                        label: 'NO2',
+                    data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2014  PM2.5 CHART
+
+          var ctxb3 = document.getElementById('2014-3').getContext('2d');
+            var Chartb3 = new Chart(ctxb3, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        label: 'PM2.5',
+                        data: [368.41, 323.67, 291.38, 556.53, 437.18, 309.19, 331.29, 258, 284.75, 456.38, 561.98, 487.67]
+                    },   {
+                        label: 'PM2.5',
+                        data: [368.41, 323.67, 291.38, 556.53, 437.18, 309.19, 331.29, 258, 284.75, 456.38, 561.98, 487.67],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2014
+var ctxb4 = document.getElementById('2014-4').getContext('2d');
+            var Chartb4 = new Chart(ctxb4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [413, 373, 341, 500, 458, 359, 381, 308, 339, 456, 500, 500],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+            });
+
+
+               
+
+                
+
+
+
+
+
+        </script>
+        <script src="skycons.js"></script>
+    </body>
+    </html>        
