@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="css/city.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        .canvas{
+            width: 50%;
+            height: 300px;
+        }
+        .header{
+            display: block;
+            padding-top: 220px;
+        }
+    </style>
+
 </head>
 <body>
         <section class="intro">
@@ -80,18 +91,176 @@
     
     
     
-                  <section class="about">
-                    <div>
-                      <p>
-                        About
-                      </p>
+                 
+            <section class="about">
+                <div class="container-fluid" id="analyze">
+                    <div class="header mt-5 mb-5">
+                        <h2 class="display-2">
+                            Air Pollution Analysis
+                        </h2>
                     </div>
-                  </section>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item active">
+                              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="pills-home" aria-selected="true">Present</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#b" role="tab" aria-controls="pills-profile" aria-selected="false">2014</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#c" role="tab" aria-controls="pills-contact" aria-selected="false">2015</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#d" role="tab" aria-controls="pills-contact" aria-selected="false">2016</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#e" role="tab" aria-controls="pills-contact" aria-selected="false">2017</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#f" role="tab" aria-controls="pills-contact" aria-selected="false">2018</a>
+                              </li>
+                   </ul>           
+                         <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                       <div class="row">
+                                            <div class="col-sm-6 canvas ">
+                                                    <canvas id="myChart"  ></canvas>
+                                             </div>
+                    
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="myChart1"  ></canvas>
+                                                </div>
+                    
+                                                <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                        <canvas id="myChart2"     ></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
+                                                </div>   
+                                       </div>
+                                                                                
+                                      
+                                </div>
+                                <div class="tab-pane fade" id="b" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                       <div class="row">
+                                            <div class="col-sm-6 canvas ">
+                                                    <canvas id="2014-1"  ></canvas>
+                                                </div>
+                    
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="2014-2"></canvas>
+                                                </div>
+                    
+                                                <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                        <canvas id="2014-3"     ></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="2014-4" style="margin-top: 60px;" ></canvas>
+                                                </div>
+                                       </div>                                                                                                        
+                                </div>
+                                <div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <div class="row">
+                                                <div class="col-sm-6 canvas ">
+                                                    <canvas id="2015-1"  ></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="2015-2"></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                        <canvas id="2015-3"     ></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="2015-4" style="margin-top: 60px;" ></canvas>
+                                                </div>
+                                        </div>
+                                               
+                                            
+                                      </div>
+
+                                      <div class="tab-pane fade" id="d" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <div class="row">
+                                                <div class="col-sm-6 canvas ">
+                                                    <canvas id="2016-1"  ></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="2016-2"></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                        <canvas id="2016-3"     ></canvas>
+                                                </div>
+                        
+                                                <div class="col-sm-6 canvas ">
+                                                        <canvas id="2016-4" style="margin-top: 60px;" ></canvas>
+                                                </div>
+                                        </div>
+
+                                      </div>
+                                         <div class="tab-pane fade" id="e" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                            <div class="row">
+                                                    <div class="col-sm-6 canvas ">
+                                                        <canvas id="2015-1"  ></canvas>
+                                                    </div>
+                            
+                                                    <div class="col-sm-6 canvas ">
+                                                            <canvas id="2015-2"></canvas>
+                                                    </div>
+                            
+                                                    <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                            <canvas id="2015-3"     ></canvas>
+                                                    </div>
+                            
+                                                    <div class="col-sm-6 canvas ">
+                                                            <canvas id="2015-4" style="margin-top: 60px;" ></canvas>
+                                                    </div>
+
+                                                 
+                                            </div>
+                                                   
+                                                
+                                          </div>
+
+                                          <div class="tab-pane fade" id="e" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                            <div class="row">
+                                                    <div class="col-sm-6 canvas ">
+                                                        <canvas id="2015-1"  ></canvas>
+                                                    </div>
+                            
+                                                    <div class="col-sm-6 canvas ">
+                                                            <canvas id="2015-2"></canvas>
+                                                    </div>
+                            
+                                                    <div class="col-sm-6 canvas" style="margin-top: 60px;">
+                                                            <canvas id="2015-3"     ></canvas>
+                                                    </div>
+                            
+                                                    <div class="col-sm-6 canvas ">
+                                                            <canvas id="2015-4" style="margin-top: 60px;" ></canvas>
+                                                    </div>
+
+                                                 
+                                            </div>
+                                                   
+                                                
+                                          </div>
+                                               
+                                            
+                                      </div>
+                                </div>
+                </div>
+          </section>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="skycons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
                 window.addEventListener('load',()=> {
                 let long;
@@ -147,6 +316,518 @@
                     skycons.play();
                     return skycons.set(iconID, Skycons[currentIcon]);
                 }
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+             // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+         data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+var ctx1 = document.getElementById('myChart1').getContext('2d');
+            var chart = new Chart(ctx1, {
+             // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+         data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+          
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+var ctx2 = document.getElementById('myChart2').getContext('2d');
+            var chart2 = new Chart(ctx2, {
+             // The type of chart we want to create
+            type: 'doughnut',
+
+            // The data for our dataset
+         data: {
+            labels:["Red","Blue","Yellow"],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: ["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"],
+          
+                        data:[300,50,100]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+var Chart3 = new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'Bar Dataset',
+            data: [10, 20, 30, 40]
+        }, {
+            label: 'Line Dataset',
+            data: [50, 30, 20, 50],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+// 2014
+
+// 1. LINE AND BAR CHART
+// SO2 CHART 
+var ctxb1 = document.getElementById('2014-1').getContext('2d');
+var Chartb1 = new Chart(ctxb1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [14.91, 14.46, 10.15, 7.85, 5.93, 5.3, 11.07, 10.17, 8.54, 10.14, 11.67, 14.6]
+        }, {
+            label: 'SO2',
+            data: [14.91, 14.46, 10.15, 7.85, 5.93, 5.3, 11.07, 10.17, 8.54, 10.14, 11.67, 14.6],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2014  N02 CHART
+
+            var ctxb2 = document.getElementById('2014-2').getContext('2d');
+            var Chartb2 = new Chart(ctxb2, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                    label: 'NO2',
+                    data: [53.85, 49.44, 43.18, 32.45, 24.4, 19.43, 23.13, 31.52, 30.06, 55.76, 62.04, 52.96],
+                    borderColor:'rgb(97, 102, 192)',
+                    borderCapStyle :'butt',
+                    
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2014  PM2.5 CHART
+
+          var ctxb3 = document.getElementById('2014-3').getContext('2d');
+            var Chartb3 = new Chart(ctxb3, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                         
+                        label: 'PM2.5',
+                        data: [329.55, 326.42, 254.26, 250.81, 166.4, 194.47, 200.13, 232.17, 228.26, 322.68, 301.29, 300.13],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2014
+var ctxb4 = document.getElementById('2014-4').getContext('2d');
+            var Chartb4 = new Chart(ctxb4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [329, 376, 304, 300, 216, 244, 250, 282, 278, 372, 352, 350],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+        //2015 -1
+
+var ctxc1 = document.getElementById('2015-1').getContext('2d');
+var Chartc1 = new Chart(ctxc1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5]
+        }, {
+            label: 'SO2',
+            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2014  N02 CHART
+
+            var ctxc2 = document.getElementById('2015-2').getContext('2d');
+            var Chartc2 = new Chart(ctxc2, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                         
+                        label: 'NO2',
+                    data: [61.91, 51.6, 41.36, 32.45, 30.22, 30.95, 32.55, 31.07, 44.08, 51.38, 37.84, 38.23],
+                    borderColor:'rgb(92, 192, 192)',
+                    borderCapStyle :'butt',
+                    
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2015 PM2.5 CHART
+
+          var ctxc3 = document.getElementById('2015-3').getContext('2d');
+            var Chartc3 = new Chart(ctxc3, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        
+                        label: 'PM2.5',
+                        data: [313.92, 312.04, 289, 282.72, 224.45, 224.83, 220.31, 170.85, 213.75, 295.16, 269.55, 297.8],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2015
+var ctxc4 = document.getElementById('2015-4').getContext('2d');
+            var Chartc4 = new Chart(ctxc4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [364, 362, 339, 332, 274, 274, 270, 220, 263, 345, 319, 347],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+        // 2015 s02
+
+ var ctxc1 = document.getElementById('2015-1').getContext('2d');
+var Chartc1 = new Chart(ctxc1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5]
+        }, {
+            label: 'SO2',
+            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2015  N02 CHART
+
+            var ctxc2 = document.getElementById('2015-2').getContext('2d');
+            var Chartc2 = new Chart(ctxc2, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                         
+                        label: 'NO2',
+                    data: [61.91, 51.6, 41.36, 32.45, 30.22, 30.95, 32.55, 31.07, 44.08, 51.38, 37.84, 38.23],
+                    borderColor:'rgb(92, 192, 192)',
+                    borderCapStyle :'butt',
+                    
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2015 PM2.5 CHART
+
+          var ctxc3 = document.getElementById('2015-3').getContext('2d');
+            var Chartc3 = new Chart(ctxc3, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        
+                        label: 'PM2.5',
+                        data: [313.92, 312.04, 289, 282.72, 224.45, 224.83, 220.31, 170.85, 213.75, 295.16, 269.55, 297.8],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2015
+var ctxc4 = document.getElementById('2015-4').getContext('2d');
+            var Chartc4 = new Chart(ctxc4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [364, 362, 339, 332, 274, 274, 270, 220, 263, 345, 319, 347],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+// 2016 starts here
+               // 2016 s02
+
+ var ctxd1 = document.getElementById('2016-1').getContext('2d');
+var Chartd1 = new Chart(ctxd1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [6.64, 3.07, 4.4, 4.56, 3.16, 5.4, 2.66, 3.12, 3.05, 2.70, 2.75, 3.6]
+        }, {
+            label: 'SO2',
+            data: [6.64, 3.07, 4.4, 4.56, 3.16, 5.4, 2.66, 3.12, 3.05, 2.70, 2.75, 3.6],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2016  N02 CHART
+
+            var ctxd2 = document.getElementById('2016-2').getContext('2d');
+            var Chartd2 = new Chart(ctxd2, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                         
+                        label: 'NO2',
+                    data: [56.05, 21.14, 20.05, 22.81, 17.5, 11.67, 11.38, 14.06, 8.84, 15.17, 25.15, 23.13],
+                    borderColor:'rgb(92, 192, 192)',
+                    borderCapStyle :'butt',
+                    
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2016 PM2.5 CHART
+
+          var ctxd3 = document.getElementById('2016-3').getContext('2d');
+            var Chartd3 = new Chart(ctxd3, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        
+                        label: 'PM2.5',
+                        data: [179, 206.67, 205.71, 166.8, 193, 119.11, 200.37, 150.12, 149.22, 181.62, 120.57, 232.45],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2016
+var ctxd4 = document.getElementById('2016-4').getContext('2d');
+            var Chartd4 = new Chart(ctxd4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [247, 256, 255, 216, 243, 184, 250, 200, 199, 231, 184, 282],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
             });
 
         </script>
