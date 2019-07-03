@@ -29,7 +29,7 @@
                                                         <p class="text-justify lead mt-2">
                                                                 New Delhi is an urban district of Delhi which serves as the capital of India and seat of all three branches of the Government of India. The foundation stone of the city was laid by Emperor George V during the Delhi Durbar of 1911. It was designed by British architects, Sir Edwin Lutyens and Sir Herbert Baker.
                                                         </p>
-                                                        <a href="https://en.wikipedia.org/wiki/New_Delhi" class="btn btn-primary btnOutline" role="button" aria-pressed="true">Explore</a>
+                                                        <a class="btn btn-primary  mt-3 btnOutline" href="https://www.tripadvisor.in/Tourism-g304551-New_Delhi_National_Capital_Territory_of_Delhi-Vacations.html" style=" border-radius: 25px;">Explore<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
                                                 </div>
                                                 
                                             </div>
@@ -89,7 +89,64 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script>
+                window.addEventListener('load',()=> {
+                let long;
+                let lat;
+                let temperatureDescription = document.querySelector('.temperature-description');
+                let temperatureDegree = document.querySelector('.temperature-degree');
+                let cityHumidity = document.querySelector('.humidity');
+                let cityVisibility = document.querySelector('.visibility');
+                let tempSection = document.querySelector('.temp-section');
+                let tempUnit = document.querySelector('.temp-unit');
+                if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(position =>{
+                    long = 77.225;
+                    lat= 28.6353;
+                    
+                    const proxy = `https://cors-anywhere.herokuapp.com/`;
+                    const api = `${proxy}https://api.darksky.net/forecast/5033dc8cfdd06d9333da833a053425a7/${lat},${long}`;
+
+                    fetch(api)
+                    .then(response => {
+                        return response.json();
+                    })  //.then only works when we get a response from fetch
+                    .then(data => {
+                        console.log(data);
+                        const {temperature, summary, icon, humidity, visibility} = data.currently;
+                        //Set DOM Elements from API
+                        cityHumidity.textContent = humidity;
+                        temperatureDegree.textContent = temperature;
+                        temperatureDescription.textContent = summary;
+                        cityVisibility.textContent = visibility;
+                        // Formula to convert into celsius
+                        let celsius = (temperature - 32) * (5 / 9);
+                        //Set Icons
+                        setIcons(icon, document.querySelector('.icon'));
+
+                        tempSection.addEventListener("click",()=> {
+                            if(tempUnit.textContent === "°F"){
+                            tempUnit.textContent = "°C";
+                            temperatureDegree.textContent = Math.floor(celsius);
+                            }else{
+                            tempUnit.textContent = "°F";
+                            temperatureDegree.textContent = temperature;
+                            }
+                        });
+                    });
+                });
+                
+                }
+
+                function setIcons(icon, iconID){
+                    const skycons = new Skycons({color: 'white'});
+                    const currentIcon = icon.replace(/-/g, "_").toUpperCase(); 
+                    skycons.play();
+                    return skycons.set(iconID, Skycons[currentIcon]);
+                }
+            });
+
+        </script>
         <script src="skycons.js"></script>
     </body>
     </html>        

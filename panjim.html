@@ -1,0 +1,152 @@
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Breathio</title>
+            <link rel="stylesheet" href="css/city.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <body>
+                <section class="intro">
+                        <div class="row">
+                             <div class="col-lg-7 col-sm-6 left bg-light">
+                                    <nav class="navbar navbar-expand-sm navbar-dark bg-dark " style="width: 900px;">
+                                            <div class="container">
+                                                <blockquote class="blockquote ml-auto mr-auto">
+                                                        <a class="navbar-brand ml-auto mr-auto" id="nav-title" href="index.html">
+                                                            Breath.io
+                                                        </a>
+                                                        <footer class="blockquote-footer">Breathe in <cite title="Source Title">Good Air</cite></footer>
+                                                </blockquote>
+                                          </div>
+                                     </nav>
+                                     <div class="container">
+                                            <div class="row" style="padding-top: 50px;">
+                                                    <div class="col">
+                                                        <div class="city-name p-3">
+                                                                <h2>Panjim</h2>
+                                                                <p class="text-justify lead mt-2">
+                                                                        Panaji, also known as Panjim, is the state capital of Goa, in southwest India. Located on the banks of the Mandovi River, the city has cobblestone streets lined with colorful villas an buildings from the Portuguese colonial era. Palm-fringed Miramar Beach sits at the confluence of the river and the Arabian Sea. Set on a hill overlooking the city is the baroque Our Lady of Immaculate Conception Church, built in 1619.
+                                                                </p>
+                                                                <a class="btn btn-primary  mt-3 btnOutline" href="https://www.tripadvisor.in/Tourism-g303877-Panjim_North_Goa_District_Goa-Vacations.html" style=" border-radius: 25px;">Explore<span class="px-2"><i class="fas fa-arrow-right"></i></span></a>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                     </div>
+                                    
+                              </div>
+                              <div class="col-lg-5 sol-sm-5 right" style="padding: 0;">
+                                  <div class="overlay">
+                                        <div class="location mt-5">
+                                                <canvas class="icon" width="238" height="238"></canvas>                                       
+                                         </div>
+                                         <div class="description mt-3">
+                                                <h4 class="temperature-description mt-3"></h4>
+                                         </div>    
+                                         <table class="table table-dark mt-5" style="background: transparent;">                                       
+                                                <tbody>
+                                                  <tr>                   
+                                                    <td style="border: none;"></td>                          
+                                                    <td class="text-center" style="border: none;"><p><b>Humidity</b></p></td>   
+                                                                                             
+                                                    <td class="pl-5"  style="border: none;"><p class="humidity"></p></td>         
+                                                  </tr>
+                                                  <tr>                     
+                                                        <td style="border: none;"></td>                       
+                                                        <td class="text-center" style="border: none;"><p><b>Temperature</b></p></td>                                                         
+                                                        <td class="pl-5"  style="border: none;">
+                                                            <p class="temp-section" style="cursor: pointer;">
+                                                                <span class="temperature-degree"></span> 
+                                                                <span class="temp-unit">°F</span>
+                                                            </p>
+                                                        </td>         
+                                                  </tr>
+                                                  <tr>    
+                                                        <td style="border: none;"></td>                                           
+                                                        <td class="text-center" style="border: none;"><p><b>Visibility</b></p></td>                                            
+                                                        <td class="pl-5"  style="border: none;"><p class="Visibility"></p></td>               
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                  </div>
+                                
+                              </div>
+                        </div>
+                    </section>
+            
+            
+            
+                          <section class="about">
+                            <div>
+                              <p>
+                                About
+                              </p>
+                            </div>
+                          </section>
+        
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                <script>
+                        window.addEventListener('load',()=> {
+                        let long;
+                        let lat;
+                        let temperatureDescription = document.querySelector('.temperature-description');
+                        let temperatureDegree = document.querySelector('.temperature-degree');
+                        let cityHumidity = document.querySelector('.humidity');
+                        let cityVisibility = document.querySelector('.visibility');
+                        let tempSection = document.querySelector('.temp-section');
+                        let tempUnit = document.querySelector('.temp-unit');
+                        if(navigator.geolocation){
+                        navigator.geolocation.getCurrentPosition(position =>{
+                            long =  73.827827;
+                            lat = 15.496777;
+                            
+                            const proxy = `https://cors-anywhere.herokuapp.com/`;
+                            const api = `${proxy}https://api.darksky.net/forecast/5033dc8cfdd06d9333da833a053425a7/${lat},${long}`;
+        
+                            fetch(api)
+                            .then(response => {
+                                return response.json();
+                            })  //.then only works when we get a response from fetch
+                            .then(data => {
+                                console.log(data);
+                                const {temperature, summary, icon, humidity, visibility} = data.currently;
+                                //Set DOM Elements from API
+                                cityHumidity.textContent = humidity;
+                                temperatureDegree.textContent = temperature;
+                                temperatureDescription.textContent = summary;
+                                cityVisibility.textContent = visibility;
+                                // Formula to convert into celsius
+                                let celsius = (temperature - 32) * (5 / 9);
+                                //Set Icons
+                                setIcons(icon, document.querySelector('.icon'));
+        
+                                tempSection.addEventListener("click",()=> {
+                                    if(tempUnit.textContent === "°F"){
+                                    tempUnit.textContent = "°C";
+                                    temperatureDegree.textContent = Math.floor(celsius);
+                                    }else{
+                                    tempUnit.textContent = "°F";
+                                    temperatureDegree.textContent = temperature;
+                                    }
+                                });
+                            });
+                        });
+                        
+                        }
+        
+                        function setIcons(icon, iconID){
+                            const skycons = new Skycons({color: 'white'});
+                            const currentIcon = icon.replace(/-/g, "_").toUpperCase(); 
+                            skycons.play();
+                            return skycons.set(iconID, Skycons[currentIcon]);
+                        }
+                    });
+        
+                </script>
+                <script src="skycons.js"></script>
+            </body>
+            </html>        
