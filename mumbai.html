@@ -206,19 +206,19 @@
                                          <div class="tab-pane fade" id="e" role="tabpanel" aria-labelledby="pills-contact-tab">
                                             <div class="row">
                                                     <div class="col-sm-6 canvas ">
-                                                        <canvas id="2015-1"  ></canvas>
+                                                        <canvas id="2017-1"  ></canvas>
                                                     </div>
                             
                                                     <div class="col-sm-6 canvas ">
-                                                            <canvas id="2015-2"></canvas>
+                                                            <canvas id="2017-2"></canvas>
                                                     </div>
                             
                                                     <div class="col-sm-6 canvas" style="margin-top: 60px;">
-                                                            <canvas id="2015-3"     ></canvas>
+                                                            <canvas id="2017-3"     ></canvas>
                                                     </div>
                             
                                                     <div class="col-sm-6 canvas ">
-                                                            <canvas id="2015-4" style="margin-top: 60px;" ></canvas>
+                                                            <canvas id="2017-4" style="margin-top: 60px;" ></canvas>
                                                     </div>
 
                                                  
@@ -227,22 +227,22 @@
                                                 
                                           </div>
 
-                                          <div class="tab-pane fade" id="e" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                          <div class="tab-pane fade" id="f" role="tabpanel" aria-labelledby="pills-contact-tab">
                                             <div class="row">
                                                     <div class="col-sm-6 canvas ">
-                                                        <canvas id="2015-1"  ></canvas>
+                                                        <canvas id="2018-1"  ></canvas>
                                                     </div>
                             
                                                     <div class="col-sm-6 canvas ">
-                                                            <canvas id="2015-2"></canvas>
+                                                            <canvas id="2018-2"></canvas>
                                                     </div>
                             
                                                     <div class="col-sm-6 canvas" style="margin-top: 60px;">
-                                                            <canvas id="2015-3"     ></canvas>
+                                                            <canvas id="2018-3"     ></canvas>
                                                     </div>
                             
                                                     <div class="col-sm-6 canvas ">
-                                                            <canvas id="2015-4" style="margin-top: 60px;" ></canvas>
+                                                            <canvas id="2018-4" style="margin-top: 60px;" ></canvas>
                                                     </div>
 
                                                  
@@ -860,6 +860,211 @@ var ctxd4 = document.getElementById('2016-4').getContext('2d');
 });
 
 
+        
+// 2017 starts here
+               // 2017 s02
+
+ var ctxe1 = document.getElementById('2017-1').getContext('2d');
+var Charte1 = new Chart(ctxe1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [4.80, 4.31, 8.78, 5.46, 4.68, 4.28, 4.28, 2.94, 4.5, 5.82, 4.6, 8.75]
+        }, {
+            label: 'SO2',
+            data: [4.80, 4.31, 8.78, 5.46, 4.68, 4.28, 4.28, 2.94, 4.5, 5.82, 4.6, 8.75],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2017  N02 CHART
+
+            var ctxe2 = document.getElementById('2017-2').getContext('2d');
+            var Charte2 = new Chart(ctxe2, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                         
+                        label: 'NO2',
+                    data: [45.76, 57.22, 33.43, 30.30, 17.18, 13.80, 29.21, 22.78, 30, 48, 45.16, 35.88],
+                    borderColor:'rgb(92, 192, 192)',
+                    borderCapStyle :'butt',
+                    
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2017 PM2.5 CHART
+
+          var ctxe3 = document.getElementById('2017-3').getContext('2d');
+            var Charte3 = new Chart(ctxe3, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        
+                        label: 'PM2.5',
+                        data: [175, 201, 211, 170, 196, 123, 207, 159, 138, 186, 128, 244],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2017
+var ctxe4 = document.getElementById('2017-4').getContext('2d');
+            var Charte4 = new Chart(ctxe4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+
+        
+        
+// 2018 starts here
+               // 2018 s02
+
+ var ctxf1 = document.getElementById('2018-1').getContext('2d');
+var Chartf1 = new Chart(ctxf1, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'SO2',
+            data: [5.57, 3.92, 4.61, 7.93, 5.5, 4.78, 5.40, 6.41, 3.52, 5.71, 4.5, 2.52]
+        }, {
+            label: 'SO2',
+            data: [5.57, 3.92, 4.61, 7.93, 5.5, 4.78, 5.40, 6.41, 3.52, 5.71, 4.5, 2.52],
+            borderColor:'rgb(75, 192, 192)',
+            borderCapStyle :'butt',
+            fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+            
+
+            // 2018  N02 CHART
+
+            var ctxf2 = document.getElementById('2018-2').getContext('2d');
+            var Chartf2 = new Chart(ctxf2, {
+                type: 'line',
+                data: {
+                        datasets: [{
+                         
+                        label: 'NO2',
+                    data: [37, 24.48, 26.33, 20.53, 16.45, 13.78, 13.68, 15.32, 21.36, 16.56, 29.95, 14.04 ],
+                    borderColor:'rgb(92, 192, 192)',
+                    borderCapStyle :'butt',
+                    
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+          // 2018 PM2.5 CHART
+
+          var ctxf3 = document.getElementById('2018-3').getContext('2d');
+            var Chartf3 = new Chart(ctxf3, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                        
+                        label: 'PM2.5',
+                        data: [160, 189, 217, 185, 205, 123, 224, 166, 152, 193, 138, 211],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+//AQI-2018
+var ctxf4 = document.getElementById('2018-4').getContext('2d');
+            var Chartf4 = new Chart(ctxf4, {
+                type: 'bar',
+                data: {
+                        datasets: [{
+                       
+                        label: 'AQI',
+                        data: [210, 239, 267, 235, 255, 186, 274, 216, 202, 243, 194, 261],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
 
 
 
