@@ -131,14 +131,14 @@
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart1"  ></canvas>
                                                 </div>
-                    
+                                                <div class="col-sm-3"></div>
                                                 <div class="col-sm-6 canvas" style="margin-top: 60px;">
                                                         <canvas id="myChart2"     ></canvas>
                                                 </div>
-                        
-                                                <div class="col-sm-6 canvas ">
+                                                <div class="col-sm-3"></div>
+                                                <!-- <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
-                                                </div>   
+                                                </div>    -->
                                        </div>
                                                                                 
                                       
@@ -361,45 +361,45 @@
 
                         
                 var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
-             // The type of chart we want to create
-            type: 'bar',
+                var chart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            datasets: [{
+                                label: 'SO2',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97]
+                            }, {
+                                label: 'SO2',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97],
+                                borderColor:'rgb(75, 192, 192)',
+                                borderCapStyle :'butt',
+                                fill:'false',
 
-            // The data for our dataset
-         data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
-        }]
-    },
-
-    // Configuration options go here
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-
-var ctx1 = document.getElementById('myChart1').getContext('2d');
+                                // Changes this dataset to become a line
+                                type: 'line'
+                            }],
+                            labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+                        },
+                        options: {
+                            responsive:true,
+                            maintainAspectRatio: false
+                        }
+                    });
+            var ctx1 = document.getElementById('myChart1').getContext('2d');
             var chart = new Chart(ctx1, {
-             // The type of chart we want to create
-            type: 'line',
+                type: 'line',
+                data: {
+                        datasets: [{
+                    label: 'NO2',
+                    data: [17.81, 17.025, 17.474, 17.264, 15.309, 16.212, 15.853, 16.625, 17.426, 19.7, 19.26, 21.01],
+                    borderColor:'rgb(97, 102, 192)',
+                    borderCapStyle :'butt',
+                    
 
-            // The data for our dataset
-         data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-          
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
-        }]
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },
-
-    // Configuration options go here
     options: {
         responsive:true,
         maintainAspectRatio: false
@@ -409,45 +409,19 @@ var ctx1 = document.getElementById('myChart1').getContext('2d');
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
             var chart2 = new Chart(ctx2, {
-             // The type of chart we want to create
-            type: 'doughnut',
+                type: 'bar',
+                data: {
+                        datasets: [{
+                         
+                        label: 'AQI',
+                        data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
 
-            // The data for our dataset
-         data: {
-            labels:["Red","Blue","Yellow"],
-                datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: ["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"],
           
-                        data:[300,50,100]
-        }]
-    },
-
-    // Configuration options go here
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-
-var ctx3 = document.getElementById('myChart3').getContext('2d');
-var Chart3 = new Chart(ctx3, {
-    type: 'bar',
-    data: {
-        datasets: [{
-            label: 'Bar Dataset',
-            data: [10, 20, 30, 40]
-        }, {
-            label: 'Line Dataset',
-            data: [50, 30, 20, 50],
-            borderColor:'rgb(75, 192, 192)',
-            borderCapStyle :'butt',
-            fill:'false',
-
-            // Changes this dataset to become a line
-            type: 'line'
         }],
-        labels: ['January', 'February', 'March', 'April']
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },
     options: {
         responsive:true,
