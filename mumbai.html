@@ -14,7 +14,7 @@
         }
         .header{
             display: block;
-            padding-top: 220px;
+            padding-top: 120px;
         }
     </style>
 
@@ -41,7 +41,7 @@
                                                         <p class="text-justify text-secondary  mt-4" style="font-size: 1.6rem;">
                                                                 Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. A financial center, it's India's largest city. On the Mumbai Harbour waterfront stands the iconic Gateway of India stone arch, built by the British Raj in 1924. Offshore, nearby Elephanta Island holds ancient cave temples dedicated to the Hindu god Shiva. The city's also famous as the heart of the Bollywood film industry.
                                                         </p>
-                                                        <a class="btn btn-success  mt-3 btnOutline" href="https://www.tripadvisor.in/Tourism-g304554-Mumbai_Maharashtra-Vacations.html" style=" border-radius: 25px;">TripAdvisor<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
+                                                        <a class="btn btn-success  mt-3 btnOutline" href="https://www.tripadvisor.in/Tourism-g304554-Mumbai_Maharashtra-Vacations.html" >TripAdvisor<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
                                                         <a class="btn btn-primary  mt-3 btnOutline" href="#analyze" >Explore<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
 
                                                 </div>
@@ -95,8 +95,8 @@
                  
             <section class="about">
                 <div class="container-fluid" id="analyze">
-                    <div class="header mt-5 mb-5">
-                        <h2 class="display-2">
+                    <div class="header text-center mb-3 mt-0">
+                        <h2 class="display-4">
                             Air Pollution Analysis
                         </h2>
                     </div>
@@ -130,14 +130,14 @@
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart1"  ></canvas>
                                                 </div>
-                    
+                                                <div class="col-sm-3"></div>
                                                 <div class="col-sm-6 canvas" style="margin-top: 60px;">
                                                         <canvas id="myChart2"     ></canvas>
                                                 </div>
-                        
-                                                <div class="col-sm-6 canvas ">
+                                                <div class="col-sm-3"></div>
+                                                <!-- <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
-                                                </div>   
+                                                </div>    -->
                                        </div>
                                                                                 
                                       
@@ -151,11 +151,12 @@
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="2014-2"></canvas>
                                                 </div>
-                    
+                                                
+                                               
                                                 <div class="col-sm-6 canvas" style="margin-top: 60px;">
                                                         <canvas id="2014-3"     ></canvas>
                                                 </div>
-                        
+                                                
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="2014-4" style="margin-top: 60px;" ></canvas>
                                                 </div>
@@ -258,7 +259,7 @@
           </section>
           <section>
                 <div class="container">
-                    <div class="header mt-5 mb-3 text-center" style="border-bottom: 1px solid black; width:50%; margin-left: auto; margin-right: auto;">
+                    <div class="header mt-5 mb-3 text-center" style="border-bottom: 1px solid black; width:50%;padding: 0; margin-left: auto; margin-right: auto;">
                         <h1 class="display-5" >Our Tips for Travelers</h1>
                         
                     </div>
@@ -359,45 +360,45 @@
                 }
 
                 var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
-             // The type of chart we want to create
-            type: 'bar',
+                var chart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            datasets: [{
+                                label: 'SO2',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97]
+                            }, {
+                                label: 'SO2',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97],
+                                borderColor:'rgb(75, 192, 192)',
+                                borderCapStyle :'butt',
+                                fill:'false',
 
-            // The data for our dataset
-         data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
-        }]
-    },
-
-    // Configuration options go here
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-
-var ctx1 = document.getElementById('myChart1').getContext('2d');
+                                // Changes this dataset to become a line
+                                type: 'line'
+                            }],
+                            labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+                        },
+                        options: {
+                            responsive:true,
+                            maintainAspectRatio: false
+                        }
+                    });
+            var ctx1 = document.getElementById('myChart1').getContext('2d');
             var chart = new Chart(ctx1, {
-             // The type of chart we want to create
-            type: 'line',
+                type: 'line',
+                data: {
+                        datasets: [{
+                    label: 'NO2',
+                    data: [17.81, 17.025, 17.474, 17.264, 15.309, 16.212, 15.853, 16.625, 17.426, 19.7, 19.26, 21.01],
+                    borderColor:'rgb(97, 102, 192)',
+                    borderCapStyle :'butt',
+                    
 
-            // The data for our dataset
-         data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-          
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
-        }]
+            // Changes this dataset to become a line
+            type: 'line'
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },
-
-    // Configuration options go here
     options: {
         responsive:true,
         maintainAspectRatio: false
@@ -407,52 +408,25 @@ var ctx1 = document.getElementById('myChart1').getContext('2d');
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
             var chart2 = new Chart(ctx2, {
-             // The type of chart we want to create
-            type: 'doughnut',
+                type: 'bar',
+                data: {
+                        datasets: [{
+                         
+                        label: 'AQI',
+                        data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
 
-            // The data for our dataset
-         data: {
-            labels:["Red","Blue","Yellow"],
-                datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: ["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"],
           
-                        data:[300,50,100]
-        }]
-    },
-
-    // Configuration options go here
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-
-var ctx3 = document.getElementById('myChart3').getContext('2d');
-var Chart3 = new Chart(ctx3, {
-    type: 'bar',
-    data: {
-        datasets: [{
-            label: 'Bar Dataset',
-            data: [10, 20, 30, 40]
-        }, {
-            label: 'Line Dataset',
-            data: [50, 30, 20, 50],
-            borderColor:'rgb(75, 192, 192)',
-            borderCapStyle :'butt',
-            fill:'false',
-
-            // Changes this dataset to become a line
-            type: 'line'
         }],
-        labels: ['January', 'February', 'March', 'April']
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },
     options: {
         responsive:true,
         maintainAspectRatio: false
     }
 });
-
 
 // 2014
 
