@@ -103,20 +103,20 @@
                                       <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="pills-home" aria-selected="true">Present</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#b" role="tab" aria-controls="pills-profile" aria-selected="false">2014</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#c" role="tab" aria-controls="pills-contact" aria-selected="false">2015</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#d" role="tab" aria-controls="pills-contact" aria-selected="false">2016</a>
+                                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#f" role="tab" aria-controls="pills-profile" aria-selected="false">2018</a>
                                       </li>
                                       <li class="nav-item">
                                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#e" role="tab" aria-controls="pills-contact" aria-selected="false">2017</a>
                                       </li>
                                       <li class="nav-item">
-                                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#f" role="tab" aria-controls="pills-contact" aria-selected="false">2018</a>
-                                      </li>
+                                          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#d" role="tab" aria-controls="pills-contact" aria-selected="false">2016</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#c" role="tab" aria-controls="pills-contact" aria-selected="false">2015</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#b" role="tab" aria-controls="pills-contact" aria-selected="false">2014</a>
+                                        </li>
                            </ul>           
                                  <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -460,11 +460,12 @@ var Chartb1 = new Chart(ctxb1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51]
         }, {
             label: 'SO2',
             data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.8)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -489,7 +490,9 @@ var Chartb1 = new Chart(ctxb1, {
                         datasets: [{
                    
                     data: [4.6, 7.6, 5.6, 5.99, 7.12, 5.45, 4.79, 4.14, 5.13, 7.15, 8.55, 8.51],
-                    borderColor:'rgb(97, 102, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    label: 'NO2',
+                     backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -514,7 +517,7 @@ var Chartb1 = new Chart(ctxb1, {
                          
                         label: 'PM2.5',
                         data: [368.41, 323.67, 291.38, 556.53, 437.18, 309.19, 331.29, 258, 284.75, 456.38, 561.98, 487.67],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -538,6 +541,7 @@ var ctxb4 = document.getElementById('2014-4').getContext('2d');
                         label: 'AQI',
                         data: [413, 373, 341, 500, 458, 359, 381, 308, 339, 456, 500, 500],
                     borderColor:'rgb(75, 192, 192)',
+                     backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -570,11 +574,12 @@ var Chartc1 = new Chart(ctxc1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [7.48, 6.01, 8.42, 6.16, 5.91, 5.08, 5.92, 5.56, 7.92, 7.29, 7.45]
         }, {
             label: 'SO2',
             data: [7.48, 6.01, 8.42, 6.16, 5.91, 5.08, 5.92, 5.56, 7.92, 7.29, 7.45],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.8)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -600,7 +605,8 @@ var Chartc1 = new Chart(ctxc1, {
                          
                         label: 'NO2',
                     data: [56.78, 47.92, 56.01, 47.29, 46.70, 42.17, 41.18, 42.03, 46.80, 58.96, 56.01, 60.72],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                     backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -625,7 +631,7 @@ var Chartc1 = new Chart(ctxc1, {
                         
                         label: 'PM2.5',
                         data: [368.41, 323.67, 291.38, 556.53, 437.18, 309.19, 331.29, 258, 284.75, 456.38, 561.98, 487.67],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -649,6 +655,7 @@ var ctxc4 = document.getElementById('2015-4').getContext('2d');
                         label: 'AQI',
                         data: [413, 373, 341, 500, 458, 359, 381, 308, 339, 456, 500, 500],
                     borderColor:'rgb(75, 192, 192)',
+                     backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -673,11 +680,12 @@ var Chartd1 = new Chart(ctxd1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [7.48, 6.01, 8.42, 6.16, 5.91, 5.08, 5.21, 5.92, 5.56, 7.92, 7.29, 7.45]
         }, {
             label: 'SO2',
             data: [7.48, 6.01, 8.42, 6.16, 5.91, 5.08, 5.21, 5.92, 5.56, 7.92, 7.29, 7.45],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.8)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -703,7 +711,8 @@ var Chartd1 = new Chart(ctxd1, {
                          
                         label: 'NO2',
                     data: [56.78, 47.92, 56.01, 47.29, 46.70, 42.17, 41.81, 42.03, 46.80, 58.96, 56.01, 60.77],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                     backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -728,7 +737,7 @@ var Chartd1 = new Chart(ctxd1, {
                         
                         label: 'PM2.5',
                         data: [467.55, 496.08, 538.44, 566.06, 545.24, 525.10, 347.74, 348.51, 444.95, 518.28, 504.88, 581.14],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -752,6 +761,7 @@ var ctxd4 = document.getElementById('2016-4').getContext('2d');
                         label: 'AQI',
                         data: [478, 500, 500, 500, 500, 500, 397, 398, 463, 500, 500, 500],
                     borderColor:'rgb(75, 192, 192)',
+                     backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -776,11 +786,12 @@ var Charte1 = new Chart(ctxe1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [7.53, 5.87, 5.07, 4.48, 4.59, 4.14, 3.77, 4.32, 4.88, 6.12, 4.86, 8.22]
         }, {
             label: 'SO2',
             data: [7.53, 5.87, 5.07, 4.48, 4.59, 4.14, 3.77, 4.32, 4.88, 6.12, 4.86, 8.22],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 1)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -806,7 +817,8 @@ var Charte1 = new Chart(ctxe1, {
                          
                         label: 'NO2',
                     data: [65.46, 64.09, 65.59, 63.54, 54.08, 48, 45.31, 50.67, 48.34, 64.49, 61.89, 71],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                     backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -831,7 +843,7 @@ var Charte1 = new Chart(ctxe1, {
                         
                         label: 'PM2.5',
                         data: [426.70, 501, 485.76, 462.43, 445.76, 335.62, 340.12, 366.67, 322.84, 532, 512, 483],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -855,6 +867,8 @@ var ctxe4 = document.getElementById('2017-4').getContext('2d');
                         label: 'AQI',
                         data: [451, 500, 490, 475, 463, 385, 390, 411, 372, 500, 500, 489],
                     borderColor:'rgb(75, 192, 192)',
+                     backgroundColor:'rgba(246, 71, 71, 0.7)',
+
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -880,11 +894,12 @@ var Chartf1 = new Chart(ctxf1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [15.09, 15.60, 9.28, 5.07, 3.96, 3.15, 5.76, 7.27, 4.42, 7.04, 7.95, 4.71]
         }, {
             label: 'SO2',
             data: [15.09, 15.60, 9.28, 5.07, 3.96, 3.15, 5.76, 7.27, 4.42, 7.04, 7.95, 4.71],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 1)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -910,7 +925,9 @@ var Chartf1 = new Chart(ctxf1, {
                          
                         label: 'NO2',
                     data: [101.14, 92.60, 84.22, 78.31, 78.28, 63.33, 64.42, 64.49, 64, 107.80, 106.27, 79.38],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(1, 50, 67, 0.8)',
+                   
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -935,7 +952,7 @@ var Chartf1 = new Chart(ctxf1, {
                         
                         label: 'PM2.5',
                         data: [428, 497, 488, 465, 442, 339, 344, 370, 325, 533, 506, 463],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(36, 37, 42, 0.8)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -958,7 +975,8 @@ var ctxf4 = document.getElementById('2018-4').getContext('2d');
                        
                         label: 'AQI',
                         data: [452, 498, 487, 477, 461, 389, 394, 414, 375, 500, 498, 491],
-                    borderColor:'rgb(75, 192, 192)',
+                    
+                     backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
