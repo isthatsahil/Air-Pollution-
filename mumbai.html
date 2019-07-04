@@ -105,20 +105,20 @@
                               <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="pills-home" aria-selected="true">Present</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#b" role="tab" aria-controls="pills-profile" aria-selected="false">2014</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#c" role="tab" aria-controls="pills-contact" aria-selected="false">2015</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#d" role="tab" aria-controls="pills-contact" aria-selected="false">2016</a>
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#f" role="tab" aria-controls="pills-profile" aria-selected="false">2018</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#e" role="tab" aria-controls="pills-contact" aria-selected="false">2017</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#f" role="tab" aria-controls="pills-contact" aria-selected="false">2018</a>
-                              </li>
+                                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#d" role="tab" aria-controls="pills-contact" aria-selected="false">2016</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#c" role="tab" aria-controls="pills-contact" aria-selected="false">2015</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#b" role="tab" aria-controls="pills-contact" aria-selected="false">2014</a>
+                                </li>
                    </ul>           
                          <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -464,11 +464,12 @@ var Chartb1 = new Chart(ctxb1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [14.91, 14.46, 10.15, 7.85, 5.93, 5.3, 11.07, 10.17, 8.54, 10.14, 11.67, 14.6]
         }, {
             label: 'SO2',
             data: [14.91, 14.46, 10.15, 7.85, 5.93, 5.3, 11.07, 10.17, 8.54, 10.14, 11.67, 14.6],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.7)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -493,7 +494,9 @@ var Chartb1 = new Chart(ctxb1, {
                         datasets: [{
                     label: 'NO2',
                     data: [53.85, 49.44, 43.18, 32.45, 24.4, 19.43, 23.13, 31.52, 30.06, 55.76, 62.04, 52.96],
-                    borderColor:'rgb(97, 102, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
+                    
                     borderCapStyle :'butt',
                     
 
@@ -518,7 +521,7 @@ var Chartb1 = new Chart(ctxb1, {
                          
                         label: 'PM2.5',
                         data: [329.55, 326.42, 254.26, 250.81, 166.4, 194.47, 200.13, 232.17, 228.26, 322.68, 301.29, 300.13],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -542,6 +545,7 @@ var ctxb4 = document.getElementById('2014-4').getContext('2d');
                         label: 'AQI',
                         data: [329, 376, 304, 300, 216, 244, 250, 282, 278, 372, 352, 350],
                     borderColor:'rgb(75, 192, 192)',
+                    backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -564,112 +568,13 @@ var Chartc1 = new Chart(ctxc1, {
     data: {
         datasets: [{
             label: 'SO2',
-            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5]
-        }, {
-            label: 'SO2',
-            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5],
-            borderColor:'rgb(75, 192, 192)',
-            borderCapStyle :'butt',
-            fill:'false',
-
-            // Changes this dataset to become a line
-            type: 'line'
-        }],
-        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
-    },
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             
-
-            // 2014  N02 CHART
-
-            var ctxc2 = document.getElementById('2015-2').getContext('2d');
-            var Chartc2 = new Chart(ctxc2, {
-                type: 'line',
-                data: {
-                        datasets: [{
-                         
-                        label: 'NO2',
-                    data: [61.91, 51.6, 41.36, 32.45, 30.22, 30.95, 32.55, 31.07, 44.08, 51.38, 37.84, 38.23],
-                    borderColor:'rgb(92, 192, 192)',
-                    borderCapStyle :'butt',
-                    
-
-            // Changes this dataset to become a line
-            type: 'line'
-        }],
-        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
-    },
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-
-          // 2015 PM2.5 CHART
-
-          var ctxc3 = document.getElementById('2015-3').getContext('2d');
-            var Chartc3 = new Chart(ctxc3, {
-                type: 'bar',
-                data: {
-                        datasets: [{
-                        
-                        label: 'PM2.5',
-                        data: [313.92, 312.04, 289, 282.72, 224.45, 224.83, 220.31, 170.85, 213.75, 295.16, 269.55, 297.8],
-                    borderColor:'rgb(75, 192, 192)',
-                    borderCapStyle :'butt',
-                     fill:'false',
-
-            // Changes this dataset to become a line
-            type: 'line'
-        }],
-        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
-    },
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-//AQI-2015
-var ctxc4 = document.getElementById('2015-4').getContext('2d');
-            var Chartc4 = new Chart(ctxc4, {
-                type: 'bar',
-                data: {
-                        datasets: [{
-                       
-                        label: 'AQI',
-                        data: [364, 362, 339, 332, 274, 274, 270, 220, 263, 345, 319, 347],
-                    borderColor:'rgb(75, 192, 192)',
-                    borderCapStyle :'butt',
-                     fill:'false',
-
-            // Changes this dataset to become a line
-        }],
-        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
-    },
-    options: {
-        responsive:true,
-        maintainAspectRatio: false
-    }
-});
-
-
-        // 2015 s02
-
- var ctxc1 = document.getElementById('2015-1').getContext('2d');
-var Chartc1 = new Chart(ctxc1, {
-    type: 'bar',
-    data: {
-        datasets: [{
-            label: 'SO2',
             data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5]
         }, {
             label: 'SO2',
             data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.7)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -695,7 +600,9 @@ var Chartc1 = new Chart(ctxc1, {
                          
                         label: 'NO2',
                     data: [61.91, 51.6, 41.36, 32.45, 30.22, 30.95, 32.55, 31.07, 44.08, 51.38, 37.84, 38.23],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
+                    
                     borderCapStyle :'butt',
                     
 
@@ -720,7 +627,7 @@ var Chartc1 = new Chart(ctxc1, {
                         
                         label: 'PM2.5',
                         data: [313.92, 312.04, 289, 282.72, 224.45, 224.83, 220.31, 170.85, 213.75, 295.16, 269.55, 297.8],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -744,6 +651,7 @@ var ctxc4 = document.getElementById('2015-4').getContext('2d');
                         label: 'AQI',
                         data: [364, 362, 339, 332, 274, 274, 270, 220, 263, 345, 319, 347],
                     borderColor:'rgb(75, 192, 192)',
+                    backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -758,6 +666,8 @@ var ctxc4 = document.getElementById('2015-4').getContext('2d');
 });
 
 
+
+
 // 2016 starts here
                // 2016 s02
 
@@ -767,11 +677,13 @@ var Chartd1 = new Chart(ctxd1, {
     data: {
         datasets: [{
             label: 'SO2',
+            
             data: [6.64, 3.07, 4.4, 4.56, 3.16, 5.4, 2.66, 3.12, 3.05, 2.70, 2.75, 3.6]
         }, {
             label: 'SO2',
             data: [6.64, 3.07, 4.4, 4.56, 3.16, 5.4, 2.66, 3.12, 3.05, 2.70, 2.75, 3.6],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.7)',
+        
             borderCapStyle :'butt',
             fill:'false',
 
@@ -797,7 +709,9 @@ var Chartd1 = new Chart(ctxd1, {
                          
                         label: 'NO2',
                     data: [56.05, 21.14, 20.05, 22.81, 17.5, 11.67, 11.38, 14.06, 8.84, 15.17, 25.15, 23.13],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
+                    
                     borderCapStyle :'butt',
                     
 
@@ -822,7 +736,7 @@ var Chartd1 = new Chart(ctxd1, {
                         
                         label: 'PM2.5',
                         data: [179, 206.67, 205.71, 166.8, 193, 119.11, 200.37, 150.12, 149.22, 181.62, 120.57, 232.45],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -847,6 +761,7 @@ var ctxd4 = document.getElementById('2016-4').getContext('2d');
                         data: [247, 256, 255, 216, 243, 184, 250, 200, 199, 231, 184, 282],
                     borderColor:'rgb(75, 192, 192)',
                     borderCapStyle :'butt',
+                    backgroundColor:'rgba(246, 71, 71, 0.7)',
                      fill:'false',
 
             // Changes this dataset to become a line
@@ -870,11 +785,13 @@ var Charte1 = new Chart(ctxe1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
+            
             data: [4.80, 4.31, 8.78, 5.46, 4.68, 4.28, 4.28, 2.94, 4.5, 5.82, 4.6, 8.75]
         }, {
             label: 'SO2',
             data: [4.80, 4.31, 8.78, 5.46, 4.68, 4.28, 4.28, 2.94, 4.5, 5.82, 4.6, 8.75],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.7)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -900,7 +817,9 @@ var Charte1 = new Chart(ctxe1, {
                          
                         label: 'NO2',
                     data: [45.76, 57.22, 33.43, 30.30, 17.18, 13.80, 29.21, 22.78, 30, 48, 45.16, 35.88],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
+                    
                     borderCapStyle :'butt',
                     
 
@@ -949,6 +868,7 @@ var ctxe4 = document.getElementById('2017-4').getContext('2d');
                         label: 'AQI',
                         data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
                     borderColor:'rgb(75, 192, 192)',
+                    backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -974,11 +894,12 @@ var Chartf1 = new Chart(ctxf1, {
     data: {
         datasets: [{
             label: 'SO2',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [5.57, 3.92, 4.61, 7.93, 5.5, 4.78, 5.40, 6.41, 3.52, 5.71, 4.5, 2.52]
         }, {
             label: 'SO2',
             data: [5.57, 3.92, 4.61, 7.93, 5.5, 4.78, 5.40, 6.41, 3.52, 5.71, 4.5, 2.52],
-            borderColor:'rgb(75, 192, 192)',
+            borderColor:'rgba(102, 51, 153, 0.7)',
             borderCapStyle :'butt',
             fill:'false',
 
@@ -1004,7 +925,9 @@ var Chartf1 = new Chart(ctxf1, {
                          
                         label: 'NO2',
                     data: [37, 24.48, 26.33, 20.53, 16.45, 13.78, 13.68, 15.32, 21.36, 16.56, 29.95, 14.04 ],
-                    borderColor:'rgb(92, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
+                    
                     borderCapStyle :'butt',
                     
 
@@ -1029,7 +952,7 @@ var Chartf1 = new Chart(ctxf1, {
                         
                         label: 'PM2.5',
                         data: [160, 189, 217, 185, 205, 123, 224, 166, 152, 193, 138, 211],
-                    borderColor:'rgb(75, 192, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
                     borderCapStyle :'butt',
                      fill:'false',
 
@@ -1053,6 +976,7 @@ var ctxf4 = document.getElementById('2018-4').getContext('2d');
                         label: 'AQI',
                         data: [210, 239, 267, 235, 255, 186, 274, 216, 202, 243, 194, 261],
                     borderColor:'rgb(75, 192, 192)',
+                    backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
