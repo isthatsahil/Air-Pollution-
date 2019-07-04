@@ -138,21 +138,21 @@ html,body{
 .buttons:not(:last-child):nth-last-child(2) {
   -webkit-transition-delay: 50ms;
           transition-delay: 20ms;
-  background-image: url('https://cbwconline.com/IMG/Facebook-Flat.png');
+  background-image: url('../img/icons8-survey-48.png');
   background-size: contain;
 }
 
 .buttons:not(:last-child):nth-last-child(3) {
   -webkit-transition-delay: 75ms;
           transition-delay: 40ms;
-  background-image: url('https://cbwconline.com/IMG/Twitter-Flat.png');
+  background-image: url('../img/icons8-user-group-48.png');
   background-size: contain;
 }
 
 .buttons:not(:last-child):nth-last-child(4) {
   -webkit-transition-delay: 100ms;
           transition-delay: 60ms;
-  background-image: url('https://cbwconline.com/IMG/Google%20Plus.svg');
+  background-image: url('../img/icons8-future-48.png');
   background-size: contain;
 }
 
