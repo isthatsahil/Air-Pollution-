@@ -296,7 +296,11 @@
                             </div>
                         </div>
                     </section>
-
+                    <footer class="footer bg-dark">
+                        <div class="container">                            
+                            <span class="copyright">&copy; Breath.io  | All Rights Reserved</span>
+                        </div>
+                    </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -365,11 +369,12 @@
                         data: {
                             datasets: [{
                                 label: 'SO2',
+                                backgroundColor: 'rgba(228, 120, 51, 0.6)',
                                 data: [8.468,8.402,8.498,8.468,8.468,8.468,8.276,8.866,8.519,8.348]
                             }, {
                                 label: 'SO2',
                                 data: [8.468,8.402,8.498,8.468,8.468,8.468,8.276,8.866,8.519,8.348],
-                                borderColor:'rgb(75, 192, 192)',
+                                borderColor:'rgba(102, 51, 153, 0.7)',
                                 borderCapStyle :'butt',
                                 fill:'false',
 
@@ -390,7 +395,8 @@
                         datasets: [{
                     label: 'NO2',
                     data: [17.81, 17.025, 17.474, 17.264, 15.309, 16.212, 15.853, 16.625, 17.426, 19.7, 19.26, 21.01],
-                    borderColor:'rgb(97, 102, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',  
                     borderCapStyle :'butt',
                     
 
@@ -408,16 +414,15 @@
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
             var chart2 = new Chart(ctx2, {
-                type: 'bar',
+                type: 'line',
                 data: {
                         datasets: [{
                          
                         label: 'pm2.5',
                         data: [185.61, 168.25, 190.63, 156.37, 161.48, 139.58, 140.18, 144.07, 122, 152.67, 159.38, 194.89],
-                    borderColor:'rgb(75, 192, 192)',
-                    borderCapStyle :'butt',
-                     fill:'false',
-
+                        backgroundColor:'rgba(246, 71, 71, 0.7)',
+                        borderCapStyle :'butt',
+                        fill:'false',
           
         }],
         labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
@@ -436,9 +441,10 @@ var Chart3 = new Chart(ctx3, {
                        
                         label: 'AQI',
                         data: [236, 219, 241, 207, 212, 194, 195, 197, 185, 203, 210, 245],
-                    borderColor:'rgb(75, 192, 192)',
-                    borderCapStyle :'butt',
-                     fill:'false',
+                        borderColor:'rgb(75, 192, 192)',
+                        backgroundColor:'rgba(246, 71, 71, 0.7)',
+                        borderCapStyle :'butt',
+                        fill:'false',
 
             // Changes this dataset to become a line
         }],

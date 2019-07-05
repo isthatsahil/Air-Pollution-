@@ -41,7 +41,7 @@
                                                         <p class="text-justify text-secondary  mt-4" style="font-size: 1.6rem;">
                                                                 New Delhi is an urban district of Delhi which serves as the capital of India and seat of all three branches of the Government of India. The foundation stone of the city was laid by Emperor George V during the Delhi Durbar of 1911. It was designed by British architects, Sir Edwin Lutyens and Sir Herbert Baker.
                                                         </p>
-                                                        <p  style="font-size: 1.2em;"><a href="">Read more &raquo;</a></p>
+
                                                         <a class="btn btn-success  mt-3 btnOutline" href="https://www.tripadvisor.in/Tourism-g304551-New_Delhi_National_Capital_Territory_of_Delhi-Vacations.html" >TripAdvisor<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
 
                                                         <a class="btn btn-primary  mt-3 btnOutline" href="#analyze" >Explore<span class="px-2"><i class="fas fa-arrow-right"></i></span></a> 
@@ -261,7 +261,7 @@
                                             <div class="article-preview">                                             
                                               <h3 class="article-h1"><a href="">Best Time to Visit</a></h3> <!-- Artikelnamnet-->
                                               <p class="article-p"> 
-                                                    The best time to visit Delhi based on  our analysis is from October to March when the weather is at its best. During this period AQI is at it's lowest, the weather is pleasent and enjoyable to experience Incredible Delhi.
+                                                    The best time to visit Delhi based on  our analysis is from March to April when the weather is at its best. During this period AQI is at it's lowest, the weather is pleasent and enjoyable to experience Incredible Delhi.
                                               </p> 
                                               
                                               <p class="article-link"><a href="">Read more &raquo;</a></p> <!-- Ändra läknen till vald artikel-->
@@ -290,6 +290,12 @@
                       </div>
                   </section>
 
+                <footer class="footer bg-dark">
+                    <div class="container">
+                        <span class="copyright">&copy; Breath.io  | All Rights Reserved</span>
+                    </div>
+                </footer>
+           
                   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
                   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
                   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -360,11 +366,12 @@
                         data: {
                             datasets: [{
                                 label: 'SO2',
-                                data: [8.468,8.402,8.498,8.468,8.468,8.468,8.276,8.866,8.519,8.348]
+                                backgroundColor: 'rgba(228, 120, 51, 0.6)',
+                                data: [8.468,8.402,8.498,8.468,8.468,8.468,8.276,8.866,8.519,8.348,9.13,8.412,8.023]
                             }, {
                                 label: 'SO2',
-                                data: [8.468,8.402,8.498,8.468,8.468,8.468,8.276,8.866,8.519,8.348],
-                                borderColor:'rgb(75, 192, 192)',
+                                data: [8.468,8.402,8.498,8.468,8.468,8.468,8.276,8.866,8.519,8.348,9.13,8.412,8.023],
+                                borderColor:'rgba(102, 51, 153, 0.7)',
                                 borderCapStyle :'butt',
                                 fill:'false',
 
@@ -385,7 +392,8 @@
                         datasets: [{
                     label: 'NO2',
                     data: [17.81, 17.025, 17.474, 17.264, 15.309, 16.212, 15.853, 16.625, 17.426, 19.7, 19.26, 21.01],
-                    borderColor:'rgb(97, 102, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',  
                     borderCapStyle :'butt',
                     
 
@@ -403,17 +411,16 @@
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
             var chart2 = new Chart(ctx2, {
-                type: 'bar',
+                type: 'line',
                 data: {
                         datasets: [{
                          
-                        label: 'AQI',
+                        label: 'pm2.5',
                         data: [185.61, 168.25, 190.63, 156.37, 161.48, 139.58, 140.18, 144.07, 122, 152.67, 159.38, 194.89],
-                    borderColor:'rgb(75, 192, 192)',
+                        borderColor:'rgba(102, 51, 153, 1)',
+                        backgroundColor:'rgba(246, 71, 71, 0.7)',
                     borderCapStyle :'butt',
-                     fill:'false',
-
-          
+                     fill:'false'    
         }],
         labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },
@@ -429,11 +436,11 @@ var Chart3 = new Chart(ctx3, {
                 data: {
                         datasets: [{                       
                         label: 'AQI',
-                        data: [275, 301, 311, 270, 296, 236, 307, 257, 244, 286, 238, 344],
+                        data: [335, 318, 290, 276, 312, 294, 296, 428, 503, 485, 398, 444],
                         borderColor:'rgb(75, 192, 192)',
-                    backgroundColor:'rgba(86, 31, 31, 0.7)',
-                    borderCapStyle :'butt',
-                     fill:'false',
+                    backgroundColor:'rgba(246, 71, 71, 0.7)',
+                      borderCapStyle :'butt',
+                     fill:'false'
 
             // Changes this dataset to become a line
         }],
