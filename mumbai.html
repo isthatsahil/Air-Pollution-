@@ -366,11 +366,19 @@
                             datasets: [{
                                 label: 'SO2',
                                 backgroundColor: 'rgba(228, 120, 51, 0.6)',
+ 
                                 data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,15.21,17.245]
                             }, {
                                 label: 'SO2',
                                 data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,15.21,17.245],
                                 borderColor:'rgb(75, 192, 192)',
+  
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,17.51,18.01]
+                            }, {
+                                label: 'SO2',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,17.51,18.01],
+                                borderColor:'rgba(102, 51, 153, 0.7)',
+   
                                 borderCapStyle :'butt',
                                 fill:'false',
 
@@ -410,10 +418,11 @@
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
             var chart2 = new Chart(ctx2, {
-                type: 'bar',
+                type: 'line',
                 data: {
                         datasets: [{
                          
+ 
                         label: 'pm2.5',
                         data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
                         borderColor:'rgb(75, 192, 192)',
@@ -442,6 +451,13 @@ var Chart3 = new Chart(ctx3, {
                     backgroundColor:'rgba(86, 31, 31, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
+  
+                        label: 'PM2.5',
+                        data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
+                        borderColor:'rgba(102, 51, 153, 1)',
+                        borderCapStyle :'butt',
+                        fill:'false',
+   
 
             // Changes this dataset to become a line
         }],
