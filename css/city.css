@@ -10,6 +10,7 @@
         height:100%;
     }
     .navbar {
+        width: 900px;
         -webkit-box-shadow: 0 8px 6px -6px #999;
         -moz-box-shadow: 0 8px 6px -6px #999;
         box-shadow: 0 8px 6px -6px #999;
@@ -206,14 +207,14 @@
   }
 /*    ######     Responsive     #####    */
 @media screen and (max-width: 748px) {
-    .main-title{
-        margin-left: 0;
+    .navbar{
+      width: 400px;
     }
   } 
 
-  .footer-logo{
-    margin:15px auto 35px;
-    width: 76px;
+  .footer{
+    margin-top: 25px;
+    width: 100%;
     }
     .copyright{
     color:#cccccc;
