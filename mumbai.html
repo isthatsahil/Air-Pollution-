@@ -365,11 +365,12 @@
                         data: {
                             datasets: [{
                                 label: 'SO2',
-                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97]
+                                backgroundColor: 'rgba(228, 120, 51, 0.6)',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,17.51,18.01]
                             }, {
                                 label: 'SO2',
-                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97],
-                                borderColor:'rgb(75, 192, 192)',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,17.51,18.01],
+                                borderColor:'rgba(102, 51, 153, 0.7)',
                                 borderCapStyle :'butt',
                                 fill:'false',
 
@@ -390,7 +391,8 @@
                         datasets: [{
                     label: 'NO2',
                     data: [17.81, 17.025, 17.474, 17.264, 15.309, 16.212, 15.853, 16.625, 17.426, 19.7, 19.26, 21.01],
-                    borderColor:'rgb(97, 102, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -408,15 +410,15 @@
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
             var chart2 = new Chart(ctx2, {
-                type: 'bar',
+                type: 'line',
                 data: {
                         datasets: [{
                          
-                        label: 'AQI',
+                        label: 'PM2.5',
                         data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
-                    borderColor:'rgb(75, 192, 192)',
-                    borderCapStyle :'butt',
-                     fill:'false',
+                        borderColor:'rgba(102, 51, 153, 1)',
+                        borderCapStyle :'butt',
+                        fill:'false',
 
           
         }],
