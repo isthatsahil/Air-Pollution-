@@ -131,14 +131,14 @@
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart1"  ></canvas>
                                                 </div>
-                                                <div class="col-sm-3"></div>
+                                              
                                                 <div class="col-sm-6 canvas" style="margin-top: 60px;">
                                                         <canvas id="myChart2"     ></canvas>
                                                 </div>
-                                                <div class="col-sm-3"></div>
-                                                <!-- <div class="col-sm-6 canvas ">
+                                               
+                                                <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
-                                                </div>    -->
+                                                </div>   
                                        </div>
                                                                                 
                                       
@@ -420,6 +420,28 @@ var ctx2 = document.getElementById('myChart2').getContext('2d');
                      fill:'false',
 
           
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+var Chart3 = new Chart(ctx3, {
+    type: 'bar',
+                data: {
+                        datasets: [{                       
+                        label: 'AQI',
+                        data: [275, 301, 311, 270, 296, 236, 307, 257, 244, 286, 238, 344],
+                        borderColor:'rgb(75, 192, 192)',
+                    backgroundColor:'rgba(86, 31, 31, 0.7)',
+                    borderCapStyle :'butt',
+                     fill:'false',
+
+            // Changes this dataset to become a line
         }],
         labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },

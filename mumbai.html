@@ -130,14 +130,14 @@
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart1"  ></canvas>
                                                 </div>
-                                                <div class="col-sm-3"></div>
+                                                
                                                 <div class="col-sm-6 canvas" style="margin-top: 60px;">
                                                         <canvas id="myChart2"     ></canvas>
                                                 </div>
-                                                <div class="col-sm-3"></div>
-                                                <!-- <div class="col-sm-6 canvas ">
+                                                
+                                                <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
-                                                </div>    -->
+                                                </div>   
                                        </div>
                                                                                 
                                       
@@ -365,10 +365,11 @@
                         data: {
                             datasets: [{
                                 label: 'SO2',
-                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97]
+                                backgroundColor: 'rgba(228, 120, 51, 0.6)',
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,15.21,17.245]
                             }, {
                                 label: 'SO2',
-                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97],
+                                data: [19.798,18.020,18.475,16.268,14.468,13.56,14.276,15.166,17.019,17.97,15.21,17.245],
                                 borderColor:'rgb(75, 192, 192)',
                                 borderCapStyle :'butt',
                                 fill:'false',
@@ -390,7 +391,8 @@
                         datasets: [{
                     label: 'NO2',
                     data: [17.81, 17.025, 17.474, 17.264, 15.309, 16.212, 15.853, 16.625, 17.426, 19.7, 19.26, 21.01],
-                    borderColor:'rgb(97, 102, 192)',
+                    borderColor:'rgba(102, 51, 153, 1)',
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',
                     borderCapStyle :'butt',
                     
 
@@ -412,13 +414,36 @@ var ctx2 = document.getElementById('myChart2').getContext('2d');
                 data: {
                         datasets: [{
                          
-                        label: 'AQI',
+                        label: 'pm2.5',
                         data: [225, 251, 261, 220, 246, 186, 257, 207, 194, 236, 188, 294],
-                    borderColor:'rgb(75, 192, 192)',
+                        borderColor:'rgb(75, 192, 192)',
+                        backgroundColor:'rgba(246, 71, 71, 0.7)',
+                        borderCapStyle :'butt',
+                        fill:'false',
+
+          
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
+
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+var Chart3 = new Chart(ctx3, {
+    type: 'bar',
+                data: {
+                        datasets: [{                       
+                        label: 'AQI',
+                        data: [275, 301, 311, 270, 296, 236, 307, 257, 244, 286, 238, 344],
+                        borderColor:'rgb(75, 192, 192)',
+                    backgroundColor:'rgba(86, 31, 31, 0.7)',
                     borderCapStyle :'butt',
                      fill:'false',
 
-          
+            // Changes this dataset to become a line
         }],
         labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
     },
@@ -469,8 +494,7 @@ var Chartb1 = new Chart(ctxb1, {
                     label: 'NO2',
                     data: [53.85, 49.44, 43.18, 32.45, 24.4, 19.43, 23.13, 31.52, 30.06, 55.76, 62.04, 52.96],
                     borderColor:'rgba(102, 51, 153, 1)',
-                    backgroundColor:'rgba(174, 168, 211, 0.7)',
-                    
+                    backgroundColor:'rgba(174, 168, 211, 0.7)',                    
                     borderCapStyle :'butt',
                     
 

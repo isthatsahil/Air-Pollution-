@@ -128,14 +128,14 @@
                                                 <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart1"  ></canvas>
                                                 </div>
-                                                <div class="col-sm-3"></div>
+                                               
                                                 <div class="col-sm-6 canvas" style="margin-top: 60px;">
                                                         <canvas id="myChart2"     ></canvas>
                                                 </div>
-                                                <div class="col-sm-"></div>
-                                                <!-- <div class="col-sm-6 canvas ">
+                                               
+                                                <div class="col-sm-6 canvas ">
                                                         <canvas id="myChart3" style="margin-top: 60px;" ></canvas>
-                                                </div>    -->
+                                                </div>   
                                        </div>
                                                                                 
                                       
@@ -412,7 +412,7 @@ var ctx2 = document.getElementById('myChart2').getContext('2d');
                 data: {
                         datasets: [{
                          
-                        label: 'AQI',
+                        label: 'pm2.5',
                         data: [185.61, 168.25, 190.63, 156.37, 161.48, 139.58, 140.18, 144.07, 122, 152.67, 159.38, 194.89],
                     borderColor:'rgb(75, 192, 192)',
                     borderCapStyle :'butt',
@@ -428,27 +428,27 @@ var ctx2 = document.getElementById('myChart2').getContext('2d');
     }
 });
 
-// var ctx3 = document.getElementById('myChart3').getContext('2d');
-// var Chart3 = new Chart(ctx3, {
-//     type: 'bar',
-//                 data: {
-//                         datasets: [{
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+var Chart3 = new Chart(ctx3, {
+    type: 'bar',
+                data: {
+                        datasets: [{
                        
-//                         label: 'AQI',
-//                         data: [235, 218, 240, 206, 211, 195, 196, 197, 185, 203, 209, 245],
-//                     borderColor:'rgb(75, 192, 192)',
-//                     borderCapStyle :'butt',
-//                      fill:'false',
+                        label: 'AQI',
+                        data: [236, 219, 241, 207, 212, 194, 195, 197, 185, 203, 210, 245],
+                    borderColor:'rgb(75, 192, 192)',
+                    borderCapStyle :'butt',
+                     fill:'false',
 
-//             // Changes this dataset to become a line
-//         }],
-//         labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
-//     },
-//     options: {
-//         responsive:true,
-//         maintainAspectRatio: false
-//     }
-// });
+            // Changes this dataset to become a line
+        }],
+        labels: ['January', 'February', 'March', 'April' ,'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' ,'December']
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false
+    }
+});
 
 
 // 2014
@@ -461,18 +461,12 @@ var Chartb1 = new Chart(ctxb1, {
     data: {
         datasets: [{
             label: 'SO2',
-
+            borderColor:'rgb(75, 192, 192)',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [2.01, 2.06, 3.1, 2.66, 2.12, 2.18, 2.31, 2.06, 2.00, 2.03, 2.05, 2.33]
         }, {
             label: 'SO2',
             data: [2.01, 2.06, 3.1, 2.66, 2.12, 2.18, 2.31, 2.06, 2.00, 2.03, 2.05, 2.33],
-            borderColor:'rgb(75, 192, 192)',
-
-            backgroundColor: 'rgba(228, 120, 51, 0.6)',
-            data: [14.91, 14.46, 10.15, 7.85, 5.93, 5.3, 11.07, 10.17, 8.54, 10.14, 11.67, 14.6]
-        }, {
-            label: 'SO2',
-            data: [14.91, 14.46, 10.15, 7.85, 5.93, 5.3, 11.07, 10.17, 8.54, 10.14, 11.67, 14.6],
             borderColor:'rgba(102, 51, 153, 0.7)',
 
             borderCapStyle :'butt',
@@ -580,18 +574,13 @@ var Chartc1 = new Chart(ctxc1, {
     data: {
         datasets: [{
             label: 'SO2',
- 
+            borderColor:'rgb(75, 192, 192)',
+  
+           backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [2.10, 2.04, 2.21, 2.18, 2.12, 1.96, 2.66, 2.04, 2.02, 2.55, 2.90, 3.02]
         }, {
             label: 'SO2',
             data: [2.10, 2.04, 2.21, 2.18, 2.12, 1.96, 2.66, 2.04, 2.02, 2.55, 2.90, 3.02],
-            borderColor:'rgb(75, 192, 192)',
-  
-            backgroundColor: 'rgba(228, 120, 51, 0.6)',
-            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5]
-        }, {
-            label: 'SO2',
-            data: [13.3, 7.85, 6.65, 6.8, 5.16, 3.77, 6.37, 6.03, 5.98, 6.61, 5.54, 5.5],
             borderColor:'rgba(102, 51, 153, 0.7)',
    
             borderCapStyle :'butt',
@@ -712,18 +701,13 @@ var Chartd1 = new Chart(ctxd1, {
     data: {
         datasets: [{
             label: 'SO2',
- 
+            borderColor:'rgb(75, 192, 192)',
+  
+     backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [2.0, 2, 18.63, 18.64, 18.63, 17.06, 15.51, 14.97, 15.92, 18.14, 19.25, 19.90]
         }, {
             label: 'SO2',
-            data: [2.0, 2, 18.63, 18.64, 18.63, 17.06, 15.51, 14.97, 15.92, 18.14, 19.25, 19.90],
-            borderColor:'rgb(75, 192, 192)',
-  
-            backgroundColor: 'rgba(228, 120, 51, 0.6)',
-            data: [6.64, 3.07, 4.4, 4.56, 3.16, 5.4, 2.66, 3.12, 3.05, 2.70, 2.75, 3.6]
-        }, {
-            label: 'SO2',
-            data: [6.64, 3.07, 4.4, 4.56, 3.16, 5.4, 2.66, 3.12, 3.05, 2.70, 2.75, 3.6],
+            data:  [2.0, 2, 18.63, 18.64, 18.63, 17.06, 15.51, 14.97, 15.92, 18.14, 19.25, 19.90],
             borderColor:'rgba(102, 51, 153, 0.7)',
    
             borderCapStyle :'butt',
@@ -949,18 +933,12 @@ var Chartf1 = new Chart(ctxf1, {
     data: {
         datasets: [{
             label: 'SO2',
- 
+            borderColor:'rgb(75, 192, 192)',
+            backgroundColor: 'rgba(228, 120, 51, 0.6)',
             data: [2.57, 3.92, 4.61, 3.93, 5.5, 4.78, 5.40, 4.41, 3.52, 2.71, 4.5, 2.52]
         }, {
             label: 'SO2',
-            data: [2.57, 3.92, 4.61, 3.93, 5.5, 4.78, 5.40, 4.41, 3.52, 2.71, 4.5, 2.52],
-            borderColor:'rgb(75, 192, 192)',
-  
-            backgroundColor: 'rgba(228, 120, 51, 0.6)',
-            data: [5.57, 3.92, 4.61, 7.93, 5.5, 4.78, 5.40, 6.41, 3.52, 5.71, 4.5, 2.52]
-        }, {
-            label: 'SO2',
-            data: [5.57, 3.92, 4.61, 7.93, 5.5, 4.78, 5.40, 6.41, 3.52, 5.71, 4.5, 2.52],
+            data:[2.57, 3.92, 4.61, 3.93, 5.5, 4.78, 5.40, 4.41, 3.52, 2.71, 4.5, 2.52],
             borderColor:'rgba(102, 51, 153, 0.7)',
    
             borderCapStyle :'butt',
